@@ -10,13 +10,12 @@ class SearchBar extends React.Component {
   }
 
   onInputChange(event) {
-    console.log(event.target.value);
     this.setState({term: event.target.value.toUpperCase()});
   }
 
   onFormSubmit = function (event) {
     event.preventDefault();
-    console.log(this.state.term);
+    this.props.onSubmit(this.state.term);
   }
 
   render() {
