@@ -1,3 +1,5 @@
+import './ImageList.css';
+
 const ImageList = props => {
 
   const images = props.images.map(({id, description, urls}) => {
@@ -6,10 +8,7 @@ const ImageList = props => {
 
   return (
     <div className="image-list">
-      <ul>
-        <img key={2} src="" alt={"JMPC test"}/>
-        {images}
-      </ul>
+      {images}
     </div>
   );
 };
